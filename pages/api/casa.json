@@ -1,28 +1,26 @@
-
 [
     {
-        "id": "48421",
-        "title" : "Mansão de alto padrão",
-        "description" : "Esta casa foi construída em 2015 pela familia Pimenta."
+        "id": "1",
+        "title": "Mansao",
+        "price": "950,00",
+        "description": "Imovel construido recentemente, unico dono"
     },
     {
-        "id": "87949",
-        "title" : "Casa no centro",
-        "description" : "Esta casa foi construída em 2015 pela familia Pimenta."
+        "id": "2",
+        "title": "Casa abandonada",
+        "price": "50,00",
+        "description": "Imovel construido recentemente, unico dono"
     },
     {
-        "id": "1153",
-        "title" : "Apartamento",
-        "description" : "Esta casa foi construída em 5496."
+        "id": "3",
+        "title": "Kitnet",
+        "price": "350,00",
+        "description": "Imovel construido recentemente, unico dono"
     },
     {
-        "id": "447",
-        "title" : "Mansão de alto padrão",
-        "description" : "Esta casa foi construída em 2015 pela familia Pimenta."
-    },
-    {
-        "id": "5899",
-        "title" : "Kitnet",
-        "description" : "Oportunidade para estudantes universitários."
+        "id": "4",
+        "title": "Casa popular",
+        "price": "650,00",
+        "description": "Imovel construido recentemente, unico dono"
     }
 ]

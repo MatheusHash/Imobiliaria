@@ -1,5 +1,8 @@
-import {useState, useEffect} from 'react';
 import Axios from '../api/axios';
+import Imovel from './components/Imovel'
+
+import {useState, useEffect} from 'react';
+import {Container} from '@chakra-ui/react';
 
 // Link que me ensinou a fazer isso https://www.youtube.com/watch?v=bYFYF2GnMy8
 
@@ -9,24 +12,37 @@ const Home= ()=>{
     useEffect(() => {
       Axios
         .get("/api/hello")
-        .then((response) => {
-          console.log(response)
-          setListaCasa(response.data)
+        .then((res) => {
+          setListaCasa(res.data)
         })
         .catch((err) => {
           console.error("ops! ocorreu um erro" + err);
         });
     }, []);
     
-    return (
-      <div>
-        <ul>
-            {
-              listaCasa.map(casa => <li key={casa.id}><p>{casa?.title}</p><p>{casa?.description}</p></li>)
-            }
-        </ul>
-      </div>
-    )
+    if(listaCasa !== null){
+      return (
+        <Container maxW='xxl' minHeight='calc(100vh)' bg='gray.800' centerContent>
+                {
+                  listaCasa.map(
+                    (casa) => 
+                      <Imovel 
+                        key={casa.id}
+                        title={casa.title} 
+                        price={casa.price} 
+                      />
+                  )
+                }
+        </Container>
+      )
+    }else{
+      return (
+        <>
+          <p>Não temos imóveis dísponivel no momento!</p>
+        </>
+      )
+    }
+    
   }
 
   export default Home;
